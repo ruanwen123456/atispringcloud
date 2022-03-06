@@ -1,5 +1,11 @@
 server:
   port: 80
+spring:
+  application:
+    name: cloud-order-consumer
+  cloud:
+    inetutils:
+      timeout-seconds: 10
 eureka:
   client:
     #是否将自己注册进eurekaServer 默认为ture
@@ -7,7 +13,4 @@ eureka:
     #是否从rureka 已有注册信息
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:7001/eureka/
-spring:
-  application:
-    name: cloud-order-consumer
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
