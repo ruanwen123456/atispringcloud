@@ -11,7 +11,6 @@ spring:
     url: jdbc:mysql://localhost:3306/db?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: root
-
 #mybatis:
 #  mapper-locations: classpath:mappers/*.xml
 #  type-aliases-package: com.atguigu.springcloud.entities
@@ -21,3 +20,9 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
   #配置别名
   type-aliases-package: com.atguigu.springcloud.entities
+eureka:
+  client:
+    register-with-eureka: true   #是否将自己注册到eureka中
+    fetch-registry: true         #是否从eureka中获取信息
+    service-url:
+      defaultZone: http://localhost:7001/eureka/

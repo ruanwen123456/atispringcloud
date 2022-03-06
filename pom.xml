@@ -11,6 +11,7 @@
     <module>provider8001</module>
     <module>cloud-consumer-order80</module>
     <module>clould-common</module>
+    <module>cloud-eureka</module>
   </modules>
   <packaging>pom</packaging>
 
