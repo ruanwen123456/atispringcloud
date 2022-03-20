@@ -4,6 +4,7 @@ package com.atguigu.springcloud.controller;
 import com.atguigu.springcloud.controller.service.PayFeignServer;
 import com.atguigu.springcloud.entities.CommonResult;
 import com.atguigu.springcloud.entities.Payment;
+import javafx.beans.DefaultProperty;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
