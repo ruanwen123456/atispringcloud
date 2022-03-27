@@ -11,8 +11,21 @@ spring:
       transport:
         dashboard: 127.0.0.1:8080
         port: 8719
+#      datasource 和 sentinel 同级
+#      参考地址：https://github:com/alibaba/spring-cloud-alibaba/wiki/Sentinel:
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            dataId: cloud-sentinel-service
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+feign:
+  sentinel:
+    enabled: true
