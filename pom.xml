@@ -26,6 +26,8 @@
         <module>cloud-nacos-server9001</module>
         <module>cloud-nacos-server9002</module>
         <module>cloudalibaba-consumer-nacos-order83</module>
+        <module>cloudalibaba-config-nacos-client3377</module>
+        <module>cloudalibaba-sentinel-service8401</module>
     </modules>
     <packaging>pom</packaging>
 
