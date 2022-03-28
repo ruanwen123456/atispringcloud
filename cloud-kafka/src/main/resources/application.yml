@@ -1,0 +1,26 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: cloud-kafka
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  kafka:
+    bootstrap-servers: 192.168.172.128:9092
+    consumer:
+      group-id: group0
+    listener:
+      missing-topics-fatal: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+#自定义属性
+#手动创建topic
+#./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic cities
+# 参考地址 https://kafka.apache.org/quickstart
+kafka:
+  topics: cities

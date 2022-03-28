@@ -12,6 +12,17 @@ spring:
         dashboard: 127.0.0.1:8080
         port: 8719
 #      datasource 和 sentinel 同级
+#      [
+#      {
+#        "resource": "/retaLimit/byUrl",   地址
+#        "limitApp": "default",            来源应用
+#        "grade":   1,                    阈值类型 0表示线程数 1表示QPS
+#        "count":   1,                    单机阈值
+#        "strategy": 0,                   流控模式 0直接 1关联 2链路
+#        "controlBehavior": 0,            流控效果 0快速失败 1表示warn up 2表示排队等待
+#        "clusterMode": false
+#      }
+#      ]
 #      参考地址：https://github:com/alibaba/spring-cloud-alibaba/wiki/Sentinel:
       datasource:
         ds1:
